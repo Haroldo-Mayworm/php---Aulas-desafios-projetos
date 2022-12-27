@@ -24,3 +24,8 @@ function exibirTela(string $mensagem)
 {
   echo $mensagem . PHP_EOL;
 }
+
+function letrasMaiusculas(array &$conta)
+{
+  $conta['titular'] = strtoupper($conta['titular']);
+}

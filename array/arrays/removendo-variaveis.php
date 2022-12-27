@@ -21,6 +21,10 @@ $contasCorrentes[111] = sacar($contasCorrentes[111], 500);
 
 $contasCorrentes[333] = depositar($contasCorrentes[333], 640);
 
+unset($contasCorrentes[222]);
+
 foreach ($contasCorrentes as $idConta => $conta) {
-  exibirTela("$idConta {$conta['titular']} {$conta['saldo']}");
+  ['titular' => $titular, 'saldo' => $saldo] = $conta;
+  exibirTela(
+    "$idConta $titular $saldo");
 } 
